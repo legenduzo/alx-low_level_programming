@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+
 /**
  * This function prints the text
  * 'Programming is like building a multilingual puzzle'
@@ -7,12 +7,10 @@
 
 int main(void)
 {
-	char message[] = "Programming is like building a multilingual puzzle";
-	char newLine[] = "\n";
+	char message[] = "\"Programming is like building a multilingual puzzle";
 
-	strcat(message,newLine);
 
 	puts(message);
 
-	return 0;
+	return (0);
 }
