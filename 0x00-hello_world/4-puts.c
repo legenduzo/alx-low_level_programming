@@ -2,8 +2,8 @@
 
 /* A puts function */
 
+/* main() -  The entry point of the program */
 int main(void)
-	/* This is main*/
 {
 	char message[] = "\"Programming is like building a multilingual puzzle";
 
