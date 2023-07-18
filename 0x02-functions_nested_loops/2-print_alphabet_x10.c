@@ -3,7 +3,7 @@
 /* Prints a-z ten times to std1 and \n */
 
 /**
- * print_alphabets - prints a-z
+ * print_alphabet_x10 - prints a-z ten times
  *
  * Return: return type is void
  */
