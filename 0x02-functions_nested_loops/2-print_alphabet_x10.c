@@ -8,7 +8,7 @@
  * Return: return type is void
  */
 
-void print_alphabets(void)
+void print_alphabet_x10(void)
 {
 	int i;
 	int n;
