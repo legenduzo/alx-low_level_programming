@@ -13,8 +13,9 @@
 int main(void)
 {
 	const char *putchar_string = "_putchar";
+	int i;
 
-	for (int i = 0; putchar_string[i] != '\0'; i++)
+	for (i = 0; putchar_string[i] != '\0'; i++)
 	{
 		_putchar(putchar_string[i]);
 	}
