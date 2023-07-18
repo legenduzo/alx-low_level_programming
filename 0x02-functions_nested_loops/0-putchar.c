@@ -23,17 +23,3 @@ int main(void)
 
 	return (0);
 }
-
-/* This function returns one character per time */
-
-/**
- * _putchar - returns putchar
- * @c: takes an argument of type char
- *
- * Return: int
- */
-
-int _putchar(char c)
-{
-	return (putchar(c));
-}
