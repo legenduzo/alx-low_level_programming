@@ -27,10 +27,9 @@ int main(void)
 
 /**
  * _putchar - returns putchar
+ * @c: takes an argument of type char
  *
  * Return: int
- *
- * Parameter: of type char
  */
 
 int _putchar(char c)
