@@ -2,15 +2,15 @@
 #include <math.h>
 
 /**
- * largest_prime_factor - finds the largest prime factor of a number
- * @n: number to check
+ * main - finds the largest prime factor of a number
  *
  * Return: The largest prime factor of the number
  */
 
-long int largest_prime_factor(long int n)
+int main(void)
 {
 	long int i;
+	long int n = 612852475143;
 
 	while (n % 2 == 0)
 	{
@@ -24,5 +24,6 @@ long int largest_prime_factor(long int n)
 			n = n / i;
 		}
 	}
-	return (n);
+	printf("%ld\n", n);
+	return (0);
 }
