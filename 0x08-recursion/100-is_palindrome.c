@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * check_palindrome - checks
+ * check_palindrome - helper function
  * @s: string to check
  * @a: start
  * @z: end
@@ -21,6 +21,21 @@ int check_palindrome(char *s, int a, int z)
 }
 
 /**
+ * check_length - checks the length of a string
+ * @s: string to check
+ *
+ * Return: int - length
+ */
+
+int check_length(char *s)
+{
+	if (*s)
+		return (1 + length(s + 1));
+	else
+		return (0);
+}
+
+/**
  * is_palindrome - checks
  * @s: string
  *
@@ -29,10 +44,7 @@ int check_palindrome(char *s, int a, int z)
 
 int is_palindrome(char *s)
 {
-	int l = 0;
-
-	while (s[l] != '\0')
-		l++;
+	int l = check_length(s);
 
 	return (check_palindrome(s, 0, (l - 1)));
 }
