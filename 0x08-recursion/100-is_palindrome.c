@@ -30,7 +30,7 @@ int check_palindrome(char *s, int a, int z)
 int check_length(char *s)
 {
 	if (*s)
-		return (1 + length(s + 1));
+		return (1 + check_length(s + 1));
 	else
 		return (0);
 }
