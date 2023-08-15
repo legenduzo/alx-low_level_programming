@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-/*
+/**
  * main - writes the name of the file and a new line
- * Description: this describes it
+ *
+ * Description: this describes it at length, I don't know
  *
  * Return: 0 always success
  */
