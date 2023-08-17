@@ -12,6 +12,7 @@
 void opcodes(char *code, int n)
 {
 	int i;
+
 	for (i = 0; i < n; i++)
 	{
 		if (i < n - 1)
@@ -33,6 +34,7 @@ void opcodes(char *code, int n)
 int main(int argc, char *argv[])
 {
 	int n;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
