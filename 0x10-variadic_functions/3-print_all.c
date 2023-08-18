@@ -31,16 +31,10 @@ void print_arg(char format, va_list *args, char **sep)
 			break;
 		case 's':
 			str = va_arg(*args, char *);
-			if (str)
-			{
-				printf("%s%s", *sep, str);
-				*sep = ", ";
-			}
-			else
-			{
-				printf("%s%s", *sep, "(nil)");
-				*sep = ", ";
-			}
+			if (!str)
+				str = "(nil)";
+			printf("%s%s", *sep, str);
+			*sep = ", ";
 			break;
 	}
 }
