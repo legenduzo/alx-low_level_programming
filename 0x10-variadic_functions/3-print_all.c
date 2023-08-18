@@ -38,7 +38,7 @@ void print_arg(char format, va_list *args, char **sep)
 			}
 			else
 			{
-				printf("%s%s", *sep, str);
+				printf("%s%s", *sep, "(nil)");
 				*sep = ", ";
 			}
 			break;
