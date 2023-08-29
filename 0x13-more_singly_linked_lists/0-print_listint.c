@@ -2,11 +2,11 @@
 #include <stddef.h>
 #include <stdio.h>
 
-/*
- * print_listint - prints all items in a singly linked list
- * @h: pointer to head
+/**
+ * print_listint - prints the element of a linked list
+ * @h: pointer to the header
  *
- * Return: size_t
+ * Return: sizw_t
  */
 
 size_t print_listint(const listint_t *h)
@@ -16,8 +16,7 @@ size_t print_listint(const listint_t *h)
 	if (!h)
 		return (n);
 
-	do
-	{
+	do {
 		printf("%u\n", h->n);
 		h = h->next;
 		n += 1;
