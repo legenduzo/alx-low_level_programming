@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * add_nodeint_end: adds a node to the end of a linked list
+ * add_nodeint_end - adds a node to the end of a linked list
  * @head: pointer to the linked list
  * @n: The element to add to the list
  *
@@ -33,6 +33,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		temp = temp->next;
 
 	temp->next = new;
-	
+
 	return (new);
 }
