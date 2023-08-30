@@ -13,7 +13,7 @@ int pop_listint(listint_t **head)
 	int data;
 	listint_t *firstnode;
 
-	if (!head || !(*head)->n)
+	if (!head || !(*head))
 		return (0);
 
 	firstnode = *head;
