@@ -1,5 +1,5 @@
 #include <string.h>
-#include "main.h" 
+#include "main.h"
 
 /**
  * binary_to_uint - converts bits to decimals
