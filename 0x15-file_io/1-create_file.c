@@ -15,7 +15,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd, res, n;
+	int fd, res;
 	int flag = O_RDWR | O_CREAT | O_TRUNC;
 	struct stat st;
 	mode_t mode;
@@ -29,16 +29,19 @@ int create_file(const char *filename, char *text_content)
 		mode = 0600;
 
 	fd = open(filename, flag, mode);
-
-	if (!text_content)
-		n = 0;
-	else
-		n = strlen(text_content) + 1;
-
-	res = write(fd, text_content, n);
-
-	if (res == n)
-		return (1);
-	else
+	if (fd == -1)
 		return (-1);
+
+	if (text_content)
+	{
+		res = write(fd, text_content, strlen(text_content));
+		if (res == -1)
+		{
+			close(fd);
+			return (-1);
+		}
+	}
+	close(fd);
+	return (1);
+
 }
