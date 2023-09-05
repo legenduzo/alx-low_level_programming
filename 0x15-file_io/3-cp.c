@@ -28,6 +28,7 @@ void copy_files(int file_from, char **argv)
 	char buf[BUF_SIZE];
 	ssize_t rcount;
 	ssize_t wcount;
+	char fd_str[12];
 
 	int file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
@@ -43,7 +44,10 @@ void copy_files(int file_from, char **argv)
 	if (rcount == -1)
 		error("Error: Can't read from file %s\n", argv[1], 98);
 	if (close(file_to) == -1)
-		error("Error: Can't close fd %d\n", NULL, file_from, 100);
+	{
+		sprintf(fd_str, "%d", file_to);
+		error("Error: Can't close fd %d\n", fd_str, 100);
+	}
 }
 
 /**
