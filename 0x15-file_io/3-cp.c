@@ -43,7 +43,7 @@ void copy_files(int file_from, char **argv)
 	if (rcount == -1)
 		error("Error: Can't read from file %s\n", argv[1], 98);
 	if (close(file_to) == -1)
-		error("Error: Can't close fd %d\n", NULL, file_from);
+		error("Error: Can't close fd %d\n", NULL, file_from, 100);
 }
 
 /**
