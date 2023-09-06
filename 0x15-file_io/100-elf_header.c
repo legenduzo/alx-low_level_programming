@@ -16,7 +16,7 @@
  * Return: exit status
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int fd, i, bytes_read;
 	Elf64_Ehdr header;
