@@ -2,6 +2,8 @@
 
 /**
  * main - keygen
+ *
+ * Return: Always success
  */
 
 void main(void)
