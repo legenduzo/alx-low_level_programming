@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * delete_dnodeint_at_index: yes, does it.
+ * delete_dnodeint_at_index - yes, does it.
  * @head: pointer to linkedlist
  * @index: index
  *
@@ -26,8 +26,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			{
 				node->next->prev = node->prev;
 				node->prev->next = node->next;
-				node->next = NULL;
-				node->prev = NULL;
 				free(node);
 				return (1);
 			}
