@@ -17,13 +17,21 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 
 	index = key_index((unsigned char *)key, ht->size);
-	
+
 	if (index >= ht->size)
 		return (NULL);
 
 	if (!(ht->array[index]))
 		return (NULL);
 
-	value = ht->array[index]->value;
-	return (value);
+	while (ht->array[index])
+	{
+		if (strcmp(ht->array[index]->key, key) == 0)
+		{
+			value = ht->array[index]->value;
+			return (value);
+		}
+		ht->array[index] = ht->array[index]->next;
+	}
+	return (NULL);
 }
