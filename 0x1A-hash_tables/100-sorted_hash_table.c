@@ -39,29 +39,29 @@ shash_table_t *shash_table_create(unsigned long int size)
 /**
  * slist_insert - inserts node in a sorted linked list
  * @node: node to insert
- * @head: head of the linkedlist
- * @tail: tail of the linkedlist
+ * @h: head of the linkedlist
+ * @t: tail of the linkedlist
  */
 
-void slist_insert(shash_node_t *node, shash_node_t **head, shash_node_t **tail)
+void slist_insert(shash_node_t *node, shash_node_t **h, shash_node_t **t)
 {
 	shash_node_t *temp;
 
-	if (!node || !head || !tail)
+	if (!node || !h || !t)
 		return;
 
-	if (!(*head) || strcmp(node->key, (*head)->key) < 0)
+	if (!(*h) || strcmp(node->key, (*h)->key) < 0)
 	{
-		node->snext = *head;
-		if (*head)
-			(*head)->sprev = node;
+		node->snext = *h;
+		if (*h)
+			(*h)->sprev = node;
 		else
-			*tail = node;
-		*head = node;
+			*t = node;
+		*h = node;
 		return;
 	}
 
-	temp = *head;
+	temp = *h;
 	while (temp->snext)
 	{
 		if (strcmp(node->key, temp->snext->key) == 0)
@@ -81,7 +81,7 @@ void slist_insert(shash_node_t *node, shash_node_t **head, shash_node_t **tail)
 	}
 	temp->snext = node;
 	node->sprev = temp;
-	*tail = node;
+	*t = node;
 }
 /**
  * shash_table_set - sets a value in a sorted hash table
