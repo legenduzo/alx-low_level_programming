@@ -28,7 +28,7 @@ void hash_table_print(const hash_table_t *ht)
 
 			key = node->key;
 			value = node->value;
-			if (temp)
+			if (temp && !flag)
 				printf("'%s': '%s', ", key, value);
 			else
 				printf("'%s': '%s'", key, value);

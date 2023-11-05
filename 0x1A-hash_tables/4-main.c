@@ -10,7 +10,8 @@ int main(void)
     hash_table_t *ht;
     char *value;
 
-    ht = hash_table_create(1024);
+    ht = hash_table_create(30);
+    hash_table_print(ht);
     hash_table_set(ht, "c", "fun");
     hash_table_set(ht, "python", "awesome");
     hash_table_set(ht, "Bob", "and Kris love asm");
@@ -19,6 +20,8 @@ int main(void)
     hash_table_set(ht, "Betty", "Cool");
     hash_table_set(ht, "98", "Battery Street");
     hash_table_set(ht, "c", "isfun");
+    hash_table_set(ht, "dram", "memory");
+    hash_table_set(ht, "vivency", "energy");
 
     value = hash_table_get(ht, "python");
     printf("%s:%s\n", "python", value);
@@ -36,5 +39,10 @@ int main(void)
     printf("%s:%s\n", "c", value);
     value = hash_table_get(ht, "javascript");
     printf("%s:%s\n", "javascript", value);
+    value = hash_table_get(ht, "dram");
+    printf("%s:%s\n", "dram", value);
+    value = hash_table_get(ht, "vivency");
+    printf("%s:%s\n", "vivency", value);
+    hash_table_print(ht);
     return (EXIT_SUCCESS);
 }
