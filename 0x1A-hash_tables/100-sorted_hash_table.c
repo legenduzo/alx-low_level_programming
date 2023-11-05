@@ -199,7 +199,7 @@ void shash_table_print(const shash_table_t *ht)
 }
 
 /**
- * hash_table_delete - deletes hash tables
+ * shash_table_delete - deletes hash tables
  * @ht: the hash table to delete
  */
 
