@@ -2,8 +2,8 @@ CC=gcc
 SRC =main.c school.c
 OBJ=$(SRC:.c=.o)
 NAME=school
-RM=rm -rf
-TEMP= *~ \#*\# *.swp
+RM=rm -f
+TEMP= *~
 
 .PHONY: all clean oclean fclean re
 
@@ -16,12 +16,12 @@ $(NAME): $(OBJ)
 	$(CC) -c $< -o $@
 
 clean:
-	-$(RM) $(TEMP) $(NAME)
+	-$(RM) *~ $(NAME)
 
 oclean:
 	-$(RM) $(OBJ)
 
 fclean:
-	-$(RM) $(TEMP) $(NAME) $(OBJ)
+	-$(RM) *~ $(NAME) $(OBJ)
 
 re: fclean all
