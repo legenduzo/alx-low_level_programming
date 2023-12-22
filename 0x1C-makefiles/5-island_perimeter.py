@@ -8,13 +8,24 @@ def island_perimeter(grid):
 
     Arg:
     grid (list of int lists): grid to use to calculate
+
+    Return:
+    int: The perimeter of the island
     """
-    cells = 0
-    for lst in range(len(grid)):
-        for i in range(lst):
-            if i:
-                cells += 1
-                if (grid[lst - 1][i] or grid[lst + 1][i]
-                    and grid[lst][i + 1] or grid[lst][i - 1]):
-                    cells += 1
-    return (cells)
+    height = len(grid)
+    width = len(grid[0]) if height else 0
+    perimeter = 0
+
+    for i in range(height):
+        for j in range(width):
+            if grid[i][j] == 1:
+                if i == 0 or grid[i - 1][j] == 0:
+                    perimeter += 1
+                if i == height - 1 or grid[i + 1][j] == 0:
+                    perimeter += 1
+                if j == 0 or grid[i][j - 1] == 0:
+                    perimeter += 1
+                if j == width - 1 or grid[i][j + 1] == 0:
+                    perimeter += 1
+
+    return perimeter
